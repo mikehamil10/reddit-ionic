@@ -1,0 +1,14 @@
+﻿<ion-view view-title="/r/{{data.subreddit}}">
+	<ion-content>
+		<!-- Pull To Refresh -->
+		<ion-refresher pulling-text="Pull to refresh..." on-refresh="doRefresh()">
+		</ion-refresher>
+		
+		<!-- Post List -->
+		<ion-list>
+			<ion-item ng-repeat="item in items" ng-click="showPost(item.link)">
+				{{item.title}}
+			</ion-item>
+		</ion-list>
+	</ion-content>
+</ion-view>
